@@ -25,11 +25,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 // FILES
-import Home from "./src/screens/Home"
+import Navigation from "./src/navigation/nav"
 
 const App = () => {
   return (
-  <Home/>
+  <Navigation/>
   );
 };
 
