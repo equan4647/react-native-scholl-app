@@ -5,7 +5,6 @@ import {
 export default styles = StyleSheet.create({
     container:{
       flex:1,
-      marginTop:20,
     },
     list: {
       paddingHorizontal: 5,

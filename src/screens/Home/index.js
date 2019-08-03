@@ -20,23 +20,28 @@ import styles from "./style"
 
 export default class Home extends Component {
 
-    // static navigationOptions = {
-    //     headerTitleStyle: { textAlign: "center", flex: 1 },
-    //     title: "Design Book",
-    //     headerStyle: {
-    //       backgroundColor: "#673AB7"
-    //     },
-    //     headerRight: (
-    //       <View style={{ paddingRight: 10 }}>
-    //         <Search name="search" color="black" size={25} />
-    //       </View>
-    //     ),
-    //     headerLeft: (
-    //       <View style={{ paddingLeft: 10 }}>
-    //         <Menu name="menu" color="black" size={25} />
-    //       </View>
-    //     )
-    //   };
+    static navigationOptions  = ({ navigation }) => {
+      return{
+
+      
+        headerTitleStyle: { textAlign: "center", flex: 1 },
+        title: "Design Book",
+        headerStyle: {
+          backgroundColor: "#673AB7"
+        },
+        headerRight: (
+          <View style={{ paddingRight: 10 }}>
+            <TouchableOpacity onPress={navigation.openDrawer}><Text>open</Text></TouchableOpacity>
+            {/* <Search name="search" color="black" size={25} /> */}
+          </View>
+        ),
+        headerLeft: (
+          <View style={{ paddingLeft: 10 }}>
+            {/* <Menu name="menu" color="black" size={25} /> */}
+          </View>
+        )
+      }
+      };
     
 
   constructor(props) {
@@ -65,6 +70,12 @@ export default class Home extends Component {
 
     return (
       <View style={styles.container}>
+
+      <View style={{backgroundColor:"#673AB7"}}>
+        <Text style={{fontSize: 18, margin: "5%", marginBottom: "2%"}}> Good Morning</Text>
+        <Text style={{fontSize: 22, marginLeft: "5%", marginRight: "5%"}}>Sameer</Text>
+      </View>
+
         <FlatList style={styles.list}
           contentContainerStyle={styles.listContainer}
           data={this.state.data}
